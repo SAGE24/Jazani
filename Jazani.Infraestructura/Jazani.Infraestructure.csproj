@@ -8,7 +8,6 @@
 
   <ItemGroup>
     <Folder Include="Cores\Persistences\" />
-    <Folder Include="Generals\" />
   </ItemGroup>
 
   <ItemGroup>

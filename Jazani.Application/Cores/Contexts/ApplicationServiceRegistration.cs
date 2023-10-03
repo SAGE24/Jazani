@@ -1,5 +1,7 @@
 ﻿using Jazani.Application.Admins.Services;
 using Jazani.Application.Admins.Services.Implementations;
+using Jazani.Application.Generals.Services;
+using Jazani.Application.Generals.Services.Implementations;
 using Microsoft.Extensions.DependencyInjection;
 using System.Reflection;
 
@@ -11,6 +13,8 @@ public static class ApplicationServiceRegistration
         services.AddAutoMapper(Assembly.GetExecutingAssembly());
 
         services.AddTransient<IOfficeService, OfficeService>();
+        services.AddTransient<IInformationSourceService, InformationSourceService>();
+        services.AddTransient<IInformationSourceTypeService, InformationSourceTypeService>();
 
         return services;
     }

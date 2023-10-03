@@ -1,5 +1,7 @@
 ﻿using Jazani.Domain.Admins.Repositories;
+using Jazani.Domain.Generals.Repositories;
 using Jazani.Infraestructure.Admins.Persistences;
+using Jazani.Infraestructure.Generals.Persistences;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -15,6 +17,8 @@ public static class InfrastructureServiceRegistration
 
         //Domain
         services.AddTransient<IOfficeRepository, OfficeRepository>();
+        services.AddTransient<IInformationSourceRepository, InformationSourceRepository>();
+        services.AddTransient<IInformationSourceTypeRepository, InformationSourceTypeRepository>();
 
         return services;
     }

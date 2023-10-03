@@ -11,10 +11,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Controllers\Generals\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\Jazani.Application\Jazani.Application.csproj" />
     <ProjectReference Include="..\Jazani.Infraestructura\Jazani.Infraestructure.csproj" />
   </ItemGroup>
