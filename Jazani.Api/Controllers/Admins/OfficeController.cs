@@ -1,6 +1,5 @@
 ﻿using Jazani.Application.Admins.Dtos.Offices;
 using Jazani.Application.Admins.Services;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Jazani.Api.Controllers.Admins;
