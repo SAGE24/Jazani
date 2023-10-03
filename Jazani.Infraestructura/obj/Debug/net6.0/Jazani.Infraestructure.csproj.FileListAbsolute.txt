@@ -1,0 +1,15 @@
+C:\Users\sage1\OneDrive\Sage-PC\Trabajos\Jazani\Proyectos\BootcampBackend.Jazani2023\Jazani.Infraestructura\bin\Debug\net6.0\Jazani.Infraestructure.deps.json
+C:\Users\sage1\OneDrive\Sage-PC\Trabajos\Jazani\Proyectos\BootcampBackend.Jazani2023\Jazani.Infraestructura\bin\Debug\net6.0\Jazani.Infraestructure.dll
+C:\Users\sage1\OneDrive\Sage-PC\Trabajos\Jazani\Proyectos\BootcampBackend.Jazani2023\Jazani.Infraestructura\bin\Debug\net6.0\Jazani.Infraestructure.pdb
+C:\Users\sage1\OneDrive\Sage-PC\Trabajos\Jazani\Proyectos\BootcampBackend.Jazani2023\Jazani.Infraestructura\obj\Debug\net6.0\Jazani.Infraestructure.csproj.AssemblyReference.cache
+C:\Users\sage1\OneDrive\Sage-PC\Trabajos\Jazani\Proyectos\BootcampBackend.Jazani2023\Jazani.Infraestructura\obj\Debug\net6.0\Jazani.Infraestructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\sage1\OneDrive\Sage-PC\Trabajos\Jazani\Proyectos\BootcampBackend.Jazani2023\Jazani.Infraestructura\obj\Debug\net6.0\Jazani.Infraestructure.AssemblyInfoInputs.cache
+C:\Users\sage1\OneDrive\Sage-PC\Trabajos\Jazani\Proyectos\BootcampBackend.Jazani2023\Jazani.Infraestructura\obj\Debug\net6.0\Jazani.Infraestructure.AssemblyInfo.cs
+C:\Users\sage1\OneDrive\Sage-PC\Trabajos\Jazani\Proyectos\BootcampBackend.Jazani2023\Jazani.Infraestructura\obj\Debug\net6.0\Jazani.Infraestructure.csproj.CoreCompileInputs.cache
+C:\Users\sage1\OneDrive\Sage-PC\Trabajos\Jazani\Proyectos\BootcampBackend.Jazani2023\Jazani.Infraestructura\obj\Debug\net6.0\Jazani.Infraestructure.dll
+C:\Users\sage1\OneDrive\Sage-PC\Trabajos\Jazani\Proyectos\BootcampBackend.Jazani2023\Jazani.Infraestructura\obj\Debug\net6.0\refint\Jazani.Infraestructure.dll
+C:\Users\sage1\OneDrive\Sage-PC\Trabajos\Jazani\Proyectos\BootcampBackend.Jazani2023\Jazani.Infraestructura\obj\Debug\net6.0\Jazani.Infraestructure.pdb
+C:\Users\sage1\OneDrive\Sage-PC\Trabajos\Jazani\Proyectos\BootcampBackend.Jazani2023\Jazani.Infraestructura\obj\Debug\net6.0\ref\Jazani.Infraestructure.dll
+C:\Users\sage1\OneDrive\Sage-PC\Trabajos\Jazani\Proyectos\BootcampBackend.Jazani2023\Jazani.Infraestructura\bin\Debug\net6.0\Jazani.Domain.dll
+C:\Users\sage1\OneDrive\Sage-PC\Trabajos\Jazani\Proyectos\BootcampBackend.Jazani2023\Jazani.Infraestructura\bin\Debug\net6.0\Jazani.Domain.pdb
+C:\Users\sage1\OneDrive\Sage-PC\Trabajos\Jazani\Proyectos\BootcampBackend.Jazani2023\Jazani.Infraestructura\obj\Debug\net6.0\Jazani.Infraestructure.csproj.CopyComplete
