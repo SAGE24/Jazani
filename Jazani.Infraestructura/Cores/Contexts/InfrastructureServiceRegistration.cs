@@ -19,6 +19,7 @@ public static class InfrastructureServiceRegistration
         services.AddTransient<IOfficeRepository, OfficeRepository>();
         services.AddTransient<IInformationSourceRepository, InformationSourceRepository>();
         services.AddTransient<IInformationSourceTypeRepository, InformationSourceTypeRepository>();
+        services.AddTransient<IMineralTypeRepository, MineralTypeRepository>();
 
         return services;
     }

@@ -13,6 +13,7 @@ public class ApplicationDbContext : DbContext
     public DbSet<Office> Offices { get; set; }
     public DbSet<InformationSource> InformationSources { get; set; }
     public DbSet<InformationSourceType> InformationSourceTypes { get; set; }
+    public DbSet<MineralType> MineralTypes { get; set; }
     #endregion
 
     protected override void OnModelCreating(ModelBuilder modelBuilder) { 
@@ -21,5 +22,6 @@ public class ApplicationDbContext : DbContext
         modelBuilder.ApplyConfiguration(new OfficeConfiguration());
         modelBuilder.ApplyConfiguration(new InformationSourceConfiguration());
         modelBuilder.ApplyConfiguration(new InformationSourceTypeConfiguration());
+        modelBuilder.ApplyConfiguration(new MineralTypeConfiguration());
     }
 }

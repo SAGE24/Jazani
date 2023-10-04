@@ -15,6 +15,7 @@ public static class ApplicationServiceRegistration
         services.AddTransient<IOfficeService, OfficeService>();
         services.AddTransient<IInformationSourceService, InformationSourceService>();
         services.AddTransient<IInformationSourceTypeService, InformationSourceTypeService>();
+        services.AddTransient<IMineralTypeService, MineralTypeService>();
 
         return services;
     }
