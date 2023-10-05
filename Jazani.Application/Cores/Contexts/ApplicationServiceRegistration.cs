@@ -1,8 +1,4 @@
-﻿using Jazani.Application.Admins.Services;
-using Jazani.Application.Admins.Services.Implementations;
-using Jazani.Application.Generals.Services;
-using Jazani.Application.Generals.Services.Implementations;
-using Microsoft.Extensions.DependencyInjection;
+﻿using Microsoft.Extensions.DependencyInjection;
 using System.Reflection;
 
 namespace Jazani.Application.Cores.Contexts;
