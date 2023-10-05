@@ -6,4 +6,6 @@ public class InformationSourceType
     public string? Description { get; set; }
     public DateTimeOffset RegistrationDate { get; set; }
     public bool State { get; set; }
+
+    public virtual ICollection<InformationSource> InformationSources { get; set; }
 }

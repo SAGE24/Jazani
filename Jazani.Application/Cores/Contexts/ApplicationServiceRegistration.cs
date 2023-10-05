@@ -12,10 +12,11 @@ public static class ApplicationServiceRegistration
     {
         services.AddAutoMapper(Assembly.GetExecutingAssembly());
 
-        services.AddTransient<IOfficeService, OfficeService>();
-        services.AddTransient<IInformationSourceService, InformationSourceService>();
-        services.AddTransient<IInformationSourceTypeService, InformationSourceTypeService>();
-        services.AddTransient<IMineralTypeService, MineralTypeService>();
+        //Cambio por Autofac
+        //services.AddTransient<IOfficeService, OfficeService>();
+        //services.AddTransient<IInformationSourceService, InformationSourceService>();
+        //services.AddTransient<IInformationSourceTypeService, InformationSourceTypeService>();
+        //services.AddTransient<IMineralTypeService, MineralTypeService>();
 
         return services;
     }

@@ -1,17 +1,18 @@
 ﻿using Jazani.Domain.Generals.Models;
+using Jazani.Infraestructure.Cores.Converters;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
-using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace Jazani.Infraestructure.Generals.Configurations;
 public class MineralTypeConfiguration : IEntityTypeConfiguration<MineralType>
 {
     public void Configure(EntityTypeBuilder<MineralType> builder)
     {
-        var toDateTime = new ValueConverter<DateTime, DateTimeOffset>(
-                datetime => DateTimeOffset.UtcNow,
-                dateTimeOffSet => dateTimeOffSet.DateTime
-            );
+        //Reemplazado por DateTimeToDdateTimeOffSet
+        //var toDateTime = new ValueConverter<DateTime, DateTimeOffset>(
+        //        datetime => DateTimeOffset.UtcNow,
+        //        dateTimeOffSet => dateTimeOffSet.DateTime
+        //    );
 
         builder.ToTable("mineraltype", "ge");
         builder.HasKey(t => t.Id);
@@ -21,7 +22,7 @@ public class MineralTypeConfiguration : IEntityTypeConfiguration<MineralType>
         builder.Property(t => t.Slug).HasColumnName("slug");
         builder.Property(t => t.RegistrationDate)
             .HasColumnName("registrationdate")
-            .HasConversion(toDateTime)
+            .HasConversion(new DateTimeToDdateTimeOffSet())
             ;
         builder.Property(t => t.State).HasColumnName("state");
     }

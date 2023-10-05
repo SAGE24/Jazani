@@ -7,4 +7,6 @@ public class MineralType
     public string? Slug { get; set; }
     public DateTime RegistrationDate { get; set; }
     public bool State { get; set; }
+
+    public virtual ICollection<Mineral> Minerals { get; set; }
 }

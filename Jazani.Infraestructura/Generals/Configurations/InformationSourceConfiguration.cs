@@ -17,5 +17,9 @@ public class InformationSourceConfiguration : IEntityTypeConfiguration<Informati
         builder.Property(t => t.Initials).HasColumnName("initials");
         builder.Property(t => t.RegistrationDate).HasColumnName("registrationdate");
         builder.Property(t => t.State).HasColumnName("state");
+
+        builder.HasOne(one => one.InformationSourceType)
+            .WithMany(many => many.InformationSources)
+            .HasForeignKey(fk => fk.InformationSourceTypeId);
     }
 }

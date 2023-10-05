@@ -1,9 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "FSsV20vApHV1J8rUxXMZnfqQ0P6S3WZTr13t0O3wbk4KCAZssJkE03capwnvbWZany1sFkh9F4NAGL4zx5hWhA==",
+  "dgSpecHash": "4IYkGbaul1C1//pEJeX7TFpY8sk8y84mXwkwJhdKBCykKCtT5jF6tt34p2tLu5A4TR5uSidd18FYu9b1b1v/Ng==",
   "success": true,
   "projectFilePath": "C:\\Users\\sage1\\OneDrive\\Sage-PC\\Trabajos\\Jazani\\Proyectos\\BootcampBackend.Jazani2023\\Jazani.Api\\Jazani.Api.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\sage1\\.nuget\\packages\\autofac\\7.1.0\\autofac.7.1.0.nupkg.sha512",
+    "C:\\Users\\sage1\\.nuget\\packages\\autofac.extensions.dependencyinjection\\8.0.0\\autofac.extensions.dependencyinjection.8.0.0.nupkg.sha512",
     "C:\\Users\\sage1\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\sage1\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",
     "C:\\Users\\sage1\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",

@@ -1,40 +1,31 @@
 ﻿using Jazani.Domain.Generals.Models;
 using Jazani.Domain.Generals.Repositories;
 using Jazani.Infraestructure.Cores.Contexts;
+using Jazani.Infraestructure.Cores.Persistences;
 using Microsoft.EntityFrameworkCore;
 
 namespace Jazani.Infraestructure.Generals.Persistences;
-public class InformationSourceRepository : IInformationSourceRepository
+public class InformationSourceRepository : CrudRepository<InformationSource, int>, IInformationSourceRepository
 {
     private readonly ApplicationDbContext _dbContext;
 
-    public InformationSourceRepository(ApplicationDbContext dbContext)
+    public InformationSourceRepository(ApplicationDbContext dbContext) : base(dbContext)
     {
         _dbContext = dbContext;
     }
 
-    public async Task<IReadOnlyList<InformationSource>> FindAllAsync()
+    public override async Task<IReadOnlyList<InformationSource>> FindAllAsync()
     {
-        return await _dbContext.InformationSources.ToListAsync();
+        return await _dbContext.Set<InformationSource>()
+            .Include(t => t.InformationSourceType)
+            .AsNoTracking()
+            .ToListAsync();
     }
 
-    public async Task<InformationSource?> FindByIdAsync(int id)
+    public override async Task<InformationSource?> FindByIdAsync(int id)
     {
-        return await _dbContext.InformationSources.FirstOrDefaultAsync(item => item.Id == id);
-    }
-
-    public async Task<InformationSource> SaveAsync(InformationSource informationSource)
-    {
-        EntityState state = _dbContext.Entry(informationSource).State;
-
-        _ = state switch
-        {
-            EntityState.Detached => _dbContext.InformationSources.Add(informationSource),
-            EntityState.Modified => _dbContext.InformationSources.Update(informationSource)
-        };
-
-        await _dbContext.SaveChangesAsync();
-
-        return informationSource;
+        return await _dbContext.Set<InformationSource>()
+            .Include(t => t.InformationSourceType)
+            .FirstOrDefaultAsync(t => t.Id == id);
     }
 }
