@@ -9,4 +9,6 @@ public class InformationSource
     public string? Initials { get; set; }
     public DateTimeOffset RegistrationDate { get; set; }
     public bool State { get; set; }
+
+    public virtual InformationSourceType? InformationSourceType { get; set; }
 }

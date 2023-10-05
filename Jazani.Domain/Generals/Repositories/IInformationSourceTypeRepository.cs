@@ -1,11 +1,7 @@
-﻿using Jazani.Domain.Generals.Models;
+﻿using Jazani.Domain.Cores.Repositories;
+using Jazani.Domain.Generals.Models;
 
 namespace Jazani.Domain.Generals.Repositories;
-public interface IInformationSourceTypeRepository
+public interface IInformationSourceTypeRepository : ICrudRepository<InformationSourceType, int>
 {
-    Task<IReadOnlyList<InformationSourceType>> FindAllAsync();
-
-    Task<InformationSourceType?> FindByIdAsync(int id);
-
-    Task<InformationSourceType> SaveAsync(InformationSourceType informationSourceType);
 }

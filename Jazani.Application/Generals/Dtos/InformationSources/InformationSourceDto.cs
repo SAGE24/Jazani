@@ -5,7 +5,8 @@ public class InformationSourceDto
     public string Name { get; set; }
     public string? Description { get; set; }
     public int? InformationSourceid { get; set; }
-    public int? InformationSourceTypeId { get; set; }
+    //public int? InformationSourceTypeId { get; set; }
+    public InformationSourceTypeSimpleDto InformationSourceType { get; set; }
     public string? Initials { get; set; }
     public DateTimeOffset RegistrationDate { get; set; }
     public bool State { get; set; }

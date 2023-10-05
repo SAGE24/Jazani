@@ -1,8 +1,4 @@
-﻿using Jazani.Application.Admins.Services;
-using Jazani.Application.Admins.Services.Implementations;
-using Jazani.Application.Generals.Services;
-using Jazani.Application.Generals.Services.Implementations;
-using Microsoft.Extensions.DependencyInjection;
+﻿using Microsoft.Extensions.DependencyInjection;
 using System.Reflection;
 
 namespace Jazani.Application.Cores.Contexts;
@@ -12,9 +8,11 @@ public static class ApplicationServiceRegistration
     {
         services.AddAutoMapper(Assembly.GetExecutingAssembly());
 
-        services.AddTransient<IOfficeService, OfficeService>();
-        services.AddTransient<IInformationSourceService, InformationSourceService>();
-        services.AddTransient<IInformationSourceTypeService, InformationSourceTypeService>();
+        //Cambio por Autofac
+        //services.AddTransient<IOfficeService, OfficeService>();
+        //services.AddTransient<IInformationSourceService, InformationSourceService>();
+        //services.AddTransient<IInformationSourceTypeService, InformationSourceTypeService>();
+        //services.AddTransient<IMineralTypeService, MineralTypeService>();
 
         return services;
     }

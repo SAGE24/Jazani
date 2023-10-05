@@ -7,5 +7,9 @@ public class InformationSourceMapper : Profile
     public InformationSourceMapper()
     {
         CreateMap<InformationSource, InformationSourceDto>();
+
+        CreateMap<InformationSourceType, InformationSourceTypeSimpleDto>();
+
+        CreateMap<InformationSource, InformationSourceSaveDto>().ReverseMap();
     }
 }
