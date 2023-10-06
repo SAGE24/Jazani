@@ -11,7 +11,7 @@ public class InvestmentConfiguration : IEntityTypeConfiguration<Investment>
         builder.ToTable("investment", "mc");
         builder.HasKey(t => t.Id);
         builder.Property(t => t.Id).ValueGeneratedOnAdd();
-        builder.Property(t => t.Amountinvestd).HasColumnName("amountinvestd");
+        builder.Property(t => t.Amountinvestd).HasColumnName("amountinvestd").HasColumnType("decimal");
         builder.Property(t => t.Year).HasColumnName("year");
         builder.Property(t => t.Description).HasColumnName("description");
         builder.Property(t => t.Miningconcessionid).HasColumnName("miningconcessionid");

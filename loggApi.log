@@ -1,0 +1,46 @@
+2023-10-05 21:25:03.643 -05:00 [INF] Now listening on: https://localhost:7096
+2023-10-05 21:25:03.658 -05:00 [INF] Now listening on: http://localhost:5096
+2023-10-05 21:25:03.663 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-10-05 21:25:03.665 -05:00 [INF] Hosting environment: Development
+2023-10-05 21:25:03.666 -05:00 [INF] Content root path: C:\Users\sage1\OneDrive\Sage-PC\Trabajos\Jazani\Proyectos\BootcampBackend.Jazani2023\Jazani.Api
+2023-10-05 21:25:04.437 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7096/swagger/index.html - -
+2023-10-05 21:25:04.617 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7096/swagger/index.html - - - 200 - text/html;charset=utf-8 180.8302ms
+2023-10-05 21:25:04.619 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7096/_framework/aspnetcore-browser-refresh.js - -
+2023-10-05 21:25:04.625 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7096/_vs/browserLink - -
+2023-10-05 21:25:04.641 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7096/_framework/aspnetcore-browser-refresh.js - - - 200 12352 application/javascript;+charset=utf-8 22.2209ms
+2023-10-05 21:25:04.647 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7096/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 21.2955ms
+2023-10-05 21:25:04.699 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7096/swagger/v1/swagger.json - -
+2023-10-05 21:25:04.785 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7096/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 86.1097ms
+2023-10-05 21:25:24.125 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7096/api/MineralType/1 - -
+2023-10-05 21:25:24.139 -05:00 [INF] Executing endpoint 'Jazani.Api.Controllers.Generals.MineralTypeController.Get (Jazani.Api)'
+2023-10-05 21:25:24.157 -05:00 [INF] Route matched with {action = "Get", controller = "MineralType"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Http.IResult] Get(Int32) on controller Jazani.Api.Controllers.Generals.MineralTypeController (Jazani.Api).
+2023-10-05 21:25:24.739 -05:00 [WRN] No store type was specified for the decimal property 'Amountinvestd' on entity type 'Investment'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2023-10-05 21:25:25.967 -05:00 [INF] Executed DbCommand (148ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [m].[Id], [m].[description], [m].[name], [m].[registrationdate], [m].[slug], [m].[state]
+FROM [ge].[mineraltype] AS [m]
+WHERE [m].[Id] = @__p_0
+2023-10-05 21:25:26.034 -05:00 [INF] Tipo de mineral No Definido
+2023-10-05 21:25:26.045 -05:00 [INF] Setting HTTP status code 200.
+2023-10-05 21:25:26.045 -05:00 [INF] Writing value of type 'MineralTypeDto' as Json.
+2023-10-05 21:25:26.060 -05:00 [INF] Executed action Jazani.Api.Controllers.Generals.MineralTypeController.Get (Jazani.Api) in 1898.0231ms
+2023-10-05 21:25:26.062 -05:00 [INF] Executed endpoint 'Jazani.Api.Controllers.Generals.MineralTypeController.Get (Jazani.Api)'
+2023-10-05 21:25:26.068 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7096/api/MineralType/1 - - - 200 - application/json;+charset=utf-8 1943.6216ms
+2023-10-05 21:26:32.300 -05:00 [WRN] No store type was specified for the decimal property 'Amountinvestd' on entity type 'Investment'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2023-10-05 21:26:33.530 -05:00 [WRN] Tipo de mineral no econtrado para el id: 17
+2023-10-05 21:26:33.674 -05:00 [WRN] NotFoundCoreException: Jazani.Application.Cores.Exceptions.NotFoundCoreException: Tipo de mineral no econtrado para el id: 17
+   at Jazani.Application.Generals.Services.Implementations.MineralTypeService.SearchRecord(Int32 id) in C:\Users\sage1\OneDrive\Sage-PC\Trabajos\Jazani\Proyectos\BootcampBackend.Jazani2023\Jazani.Application\Generals\Services\Implementations\MineralTypeService.cs:line 73
+   at Jazani.Application.Generals.Services.Implementations.MineralTypeService.FindByIdAsync(Int32 id) in C:\Users\sage1\OneDrive\Sage-PC\Trabajos\Jazani\Proyectos\BootcampBackend.Jazani2023\Jazani.Application\Generals\Services\Implementations\MineralTypeService.cs:line 61
+   at Jazani.Api.Controllers.Generals.MineralTypeController.Get(Int32 id) in C:\Users\sage1\OneDrive\Sage-PC\Trabajos\Jazani\Proyectos\BootcampBackend.Jazani2023\Jazani.Api\Controllers\Generals\MineralTypeController.cs:line 27
+   at lambda_method428(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Jazani.Api.Middlewares.ExceptionMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in C:\Users\sage1\OneDrive\Sage-PC\Trabajos\Jazani\Proyectos\BootcampBackend.Jazani2023\Jazani.Api\Middlewares\ExceptionMiddleware.cs:line 19
