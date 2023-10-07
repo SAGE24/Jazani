@@ -14,18 +14,18 @@ public class InvestmentRepository : CrudRepository<Investment, int>, IInvestment
         _dbContext = dbContext;
     }
 
-    public override async Task<IReadOnlyList<Investment>> FindAllAsync()
-    {
-        return await _dbContext.Set<Investment>()
-            .Include(t => t.Investmentconcept)
-            .AsNoTracking()
-            .ToListAsync();
-    }
+    //public override async Task<IReadOnlyList<Investment>> FindAllAsync()
+    //{
+    //    return await _dbContext.Set<Investment>()
+    //        .Include(t => t.Investmentconcepts)
+    //        .AsNoTracking()
+    //        .ToListAsync();
+    //}
 
-    public override async Task<Investment?> FindByIdAsync(int id)
-    {
-        return await _dbContext.Set<Investment>()
-            .Include(t => t.Investmentconcept)
-            .FirstOrDefaultAsync(t => t.Id == id);
-    }
+    //public override async Task<Investment?> FindByIdAsync(int id)
+    //{
+    //    return await _dbContext.Set<Investment>()
+    //        .Include(t => t.Investmentconcepts)
+    //        .FirstOrDefaultAsync(t => t.Id == id);
+    //}
 }

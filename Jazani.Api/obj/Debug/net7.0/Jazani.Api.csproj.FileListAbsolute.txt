@@ -92,3 +92,5 @@ C:\Users\sage1\OneDrive\Sage-PC\Trabajos\Jazani\Proyectos\BootcampBackend.Jazani
 C:\Users\sage1\OneDrive\Sage-PC\Trabajos\Jazani\Proyectos\BootcampBackend.Jazani2023\Jazani.Api\obj\Debug\net7.0\Jazani.Api.pdb
 C:\Users\sage1\OneDrive\Sage-PC\Trabajos\Jazani\Proyectos\BootcampBackend.Jazani2023\Jazani.Api\obj\Debug\net7.0\Jazani.Api.genruntimeconfig.cache
 C:\Users\sage1\OneDrive\Sage-PC\Trabajos\Jazani\Proyectos\BootcampBackend.Jazani2023\Jazani.Api\obj\Debug\net7.0\ref\Jazani.Api.dll
+C:\Users\sage1\OneDrive\Sage-PC\Trabajos\Jazani\Proyectos\BootcampBackend.Jazani2023\Jazani.Api\bin\Debug\net7.0\Jazani.Core.dll
+C:\Users\sage1\OneDrive\Sage-PC\Trabajos\Jazani\Proyectos\BootcampBackend.Jazani2023\Jazani.Api\bin\Debug\net7.0\Jazani.Core.pdb

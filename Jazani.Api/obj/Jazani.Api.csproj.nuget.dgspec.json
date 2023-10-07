@@ -35,6 +35,9 @@
               "C:\\Users\\sage1\\OneDrive\\Sage-PC\\Trabajos\\Jazani\\Proyectos\\BootcampBackend.Jazani2023\\Jazani.Application\\Jazani.Application.csproj": {
                 "projectPath": "C:\\Users\\sage1\\OneDrive\\Sage-PC\\Trabajos\\Jazani\\Proyectos\\BootcampBackend.Jazani2023\\Jazani.Application\\Jazani.Application.csproj"
               },
+              "C:\\Users\\sage1\\OneDrive\\Sage-PC\\Trabajos\\Jazani\\Proyectos\\BootcampBackend.Jazani2023\\Jazani.Core\\Jazani.Core.csproj": {
+                "projectPath": "C:\\Users\\sage1\\OneDrive\\Sage-PC\\Trabajos\\Jazani\\Proyectos\\BootcampBackend.Jazani2023\\Jazani.Core\\Jazani.Core.csproj"
+              },
               "C:\\Users\\sage1\\OneDrive\\Sage-PC\\Trabajos\\Jazani\\Proyectos\\BootcampBackend.Jazani2023\\Jazani.Infraestructura\\Jazani.Infraestructure.csproj": {
                 "projectPath": "C:\\Users\\sage1\\OneDrive\\Sage-PC\\Trabajos\\Jazani\\Proyectos\\BootcampBackend.Jazani2023\\Jazani.Infraestructura\\Jazani.Infraestructure.csproj"
               }
@@ -115,6 +118,9 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
+              "C:\\Users\\sage1\\OneDrive\\Sage-PC\\Trabajos\\Jazani\\Proyectos\\BootcampBackend.Jazani2023\\Jazani.Core\\Jazani.Core.csproj": {
+                "projectPath": "C:\\Users\\sage1\\OneDrive\\Sage-PC\\Trabajos\\Jazani\\Proyectos\\BootcampBackend.Jazani2023\\Jazani.Core\\Jazani.Core.csproj"
+              },
               "C:\\Users\\sage1\\OneDrive\\Sage-PC\\Trabajos\\Jazani\\Proyectos\\BootcampBackend.Jazani2023\\Jazani.Domain\\Jazani.Domain.csproj": {
                 "projectPath": "C:\\Users\\sage1\\OneDrive\\Sage-PC\\Trabajos\\Jazani\\Proyectos\\BootcampBackend.Jazani2023\\Jazani.Domain\\Jazani.Domain.csproj"
               }
@@ -168,6 +174,65 @@
         }
       }
     },
+    "C:\\Users\\sage1\\OneDrive\\Sage-PC\\Trabajos\\Jazani\\Proyectos\\BootcampBackend.Jazani2023\\Jazani.Core\\Jazani.Core.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\sage1\\OneDrive\\Sage-PC\\Trabajos\\Jazani\\Proyectos\\BootcampBackend.Jazani2023\\Jazani.Core\\Jazani.Core.csproj",
+        "projectName": "Jazani.Core",
+        "projectPath": "C:\\Users\\sage1\\OneDrive\\Sage-PC\\Trabajos\\Jazani\\Proyectos\\BootcampBackend.Jazani2023\\Jazani.Core\\Jazani.Core.csproj",
+        "packagesPath": "C:\\Users\\sage1\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\sage1\\OneDrive\\Sage-PC\\Trabajos\\Jazani\\Proyectos\\BootcampBackend.Jazani2023\\Jazani.Core\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\sage1\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
     "C:\\Users\\sage1\\OneDrive\\Sage-PC\\Trabajos\\Jazani\\Proyectos\\BootcampBackend.Jazani2023\\Jazani.Domain\\Jazani.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -195,7 +260,11 @@
         "frameworks": {
           "net7.0": {
             "targetAlias": "net7.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "C:\\Users\\sage1\\OneDrive\\Sage-PC\\Trabajos\\Jazani\\Proyectos\\BootcampBackend.Jazani2023\\Jazani.Core\\Jazani.Core.csproj": {
+                "projectPath": "C:\\Users\\sage1\\OneDrive\\Sage-PC\\Trabajos\\Jazani\\Proyectos\\BootcampBackend.Jazani2023\\Jazani.Core\\Jazani.Core.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
@@ -255,6 +324,9 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
+              "C:\\Users\\sage1\\OneDrive\\Sage-PC\\Trabajos\\Jazani\\Proyectos\\BootcampBackend.Jazani2023\\Jazani.Core\\Jazani.Core.csproj": {
+                "projectPath": "C:\\Users\\sage1\\OneDrive\\Sage-PC\\Trabajos\\Jazani\\Proyectos\\BootcampBackend.Jazani2023\\Jazani.Core\\Jazani.Core.csproj"
+              },
               "C:\\Users\\sage1\\OneDrive\\Sage-PC\\Trabajos\\Jazani\\Proyectos\\BootcampBackend.Jazani2023\\Jazani.Domain\\Jazani.Domain.csproj": {
                 "projectPath": "C:\\Users\\sage1\\OneDrive\\Sage-PC\\Trabajos\\Jazani\\Proyectos\\BootcampBackend.Jazani2023\\Jazani.Domain\\Jazani.Domain.csproj"
               }

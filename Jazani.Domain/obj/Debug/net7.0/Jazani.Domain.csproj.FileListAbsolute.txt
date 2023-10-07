@@ -9,3 +9,7 @@ C:\Users\sage1\OneDrive\Sage-PC\Trabajos\Jazani\Proyectos\BootcampBackend.Jazani
 C:\Users\sage1\OneDrive\Sage-PC\Trabajos\Jazani\Proyectos\BootcampBackend.Jazani2023\Jazani.Domain\obj\Debug\net7.0\refint\Jazani.Domain.dll
 C:\Users\sage1\OneDrive\Sage-PC\Trabajos\Jazani\Proyectos\BootcampBackend.Jazani2023\Jazani.Domain\obj\Debug\net7.0\Jazani.Domain.pdb
 C:\Users\sage1\OneDrive\Sage-PC\Trabajos\Jazani\Proyectos\BootcampBackend.Jazani2023\Jazani.Domain\obj\Debug\net7.0\ref\Jazani.Domain.dll
+C:\Users\sage1\OneDrive\Sage-PC\Trabajos\Jazani\Proyectos\BootcampBackend.Jazani2023\Jazani.Domain\bin\Debug\net7.0\Jazani.Core.dll
+C:\Users\sage1\OneDrive\Sage-PC\Trabajos\Jazani\Proyectos\BootcampBackend.Jazani2023\Jazani.Domain\bin\Debug\net7.0\Jazani.Core.pdb
+C:\Users\sage1\OneDrive\Sage-PC\Trabajos\Jazani\Proyectos\BootcampBackend.Jazani2023\Jazani.Domain\obj\Debug\net7.0\Jazani.Domain.csproj.AssemblyReference.cache
+C:\Users\sage1\OneDrive\Sage-PC\Trabajos\Jazani\Proyectos\BootcampBackend.Jazani2023\Jazani.Domain\obj\Debug\net7.0\Jazani.Domain.csproj.CopyComplete

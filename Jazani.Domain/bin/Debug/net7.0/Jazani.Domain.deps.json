@@ -7,14 +7,27 @@
   "targets": {
     ".NETCoreApp,Version=v7.0": {
       "Jazani.Domain/1.0.0": {
+        "dependencies": {
+          "Jazani.Core": "1.0.0"
+        },
         "runtime": {
           "Jazani.Domain.dll": {}
+        }
+      },
+      "Jazani.Core/1.0.0": {
+        "runtime": {
+          "Jazani.Core.dll": {}
         }
       }
     }
   },
   "libraries": {
     "Jazani.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Jazani.Core/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

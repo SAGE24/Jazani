@@ -1422,6 +1422,7 @@
           "AutoMapper.Extensions.Microsoft.DependencyInjection": "12.0.1",
           "Autofac.Extensions.DependencyInjection": "8.0.0",
           "FluentValidation.AspNetCore": "11.3.0",
+          "Jazani.Core": "1.0.0",
           "Jazani.Domain": "1.0.0"
         },
         "compile": {
@@ -1431,9 +1432,22 @@
           "bin/placeholder/Jazani.Application.dll": {}
         }
       },
+      "Jazani.Core/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "compile": {
+          "bin/placeholder/Jazani.Core.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Jazani.Core.dll": {}
+        }
+      },
       "Jazani.Domain/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v7.0",
+        "dependencies": {
+          "Jazani.Core": "1.0.0"
+        },
         "compile": {
           "bin/placeholder/Jazani.Domain.dll": {}
         },
@@ -1446,6 +1460,7 @@
         "framework": ".NETCoreApp,Version=v7.0",
         "dependencies": {
           "Autofac.Extensions.DependencyInjection": "8.0.0",
+          "Jazani.Core": "1.0.0",
           "Jazani.Domain": "1.0.0",
           "Microsoft.EntityFrameworkCore": "7.0.11",
           "Microsoft.EntityFrameworkCore.SqlServer": "7.0.11"
@@ -3763,6 +3778,11 @@
       "path": "../Jazani.Application/Jazani.Application.csproj",
       "msbuildProject": "../Jazani.Application/Jazani.Application.csproj"
     },
+    "Jazani.Core/1.0.0": {
+      "type": "project",
+      "path": "../Jazani.Core/Jazani.Core.csproj",
+      "msbuildProject": "../Jazani.Core/Jazani.Core.csproj"
+    },
     "Jazani.Domain/1.0.0": {
       "type": "project",
       "path": "../Jazani.Domain/Jazani.Domain.csproj",
@@ -3777,6 +3797,7 @@
   "projectFileDependencyGroups": {
     "net7.0": [
       "Jazani.Application >= 1.0.0",
+      "Jazani.Core >= 1.0.0",
       "Jazani.Infraestructure >= 1.0.0",
       "Newtonsoft.Json >= 13.0.3",
       "Serilog.AspNetCore >= 7.0.0",
@@ -3817,6 +3838,9 @@
           "projectReferences": {
             "C:\\Users\\sage1\\OneDrive\\Sage-PC\\Trabajos\\Jazani\\Proyectos\\BootcampBackend.Jazani2023\\Jazani.Application\\Jazani.Application.csproj": {
               "projectPath": "C:\\Users\\sage1\\OneDrive\\Sage-PC\\Trabajos\\Jazani\\Proyectos\\BootcampBackend.Jazani2023\\Jazani.Application\\Jazani.Application.csproj"
+            },
+            "C:\\Users\\sage1\\OneDrive\\Sage-PC\\Trabajos\\Jazani\\Proyectos\\BootcampBackend.Jazani2023\\Jazani.Core\\Jazani.Core.csproj": {
+              "projectPath": "C:\\Users\\sage1\\OneDrive\\Sage-PC\\Trabajos\\Jazani\\Proyectos\\BootcampBackend.Jazani2023\\Jazani.Core\\Jazani.Core.csproj"
             },
             "C:\\Users\\sage1\\OneDrive\\Sage-PC\\Trabajos\\Jazani\\Proyectos\\BootcampBackend.Jazani2023\\Jazani.Infraestructura\\Jazani.Infraestructure.csproj": {
               "projectPath": "C:\\Users\\sage1\\OneDrive\\Sage-PC\\Trabajos\\Jazani\\Proyectos\\BootcampBackend.Jazani2023\\Jazani.Infraestructura\\Jazani.Infraestructure.csproj"

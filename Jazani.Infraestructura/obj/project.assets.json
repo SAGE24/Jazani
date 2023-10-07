@@ -994,9 +994,22 @@
           }
         }
       },
+      "Jazani.Core/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "compile": {
+          "bin/placeholder/Jazani.Core.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Jazani.Core.dll": {}
+        }
+      },
       "Jazani.Domain/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v7.0",
+        "dependencies": {
+          "Jazani.Core": "1.0.0"
+        },
         "compile": {
           "bin/placeholder/Jazani.Domain.dll": {}
         },
@@ -2694,6 +2707,11 @@
         "useSharedDesignerContext.txt"
       ]
     },
+    "Jazani.Core/1.0.0": {
+      "type": "project",
+      "path": "../Jazani.Core/Jazani.Core.csproj",
+      "msbuildProject": "../Jazani.Core/Jazani.Core.csproj"
+    },
     "Jazani.Domain/1.0.0": {
       "type": "project",
       "path": "../Jazani.Domain/Jazani.Domain.csproj",
@@ -2703,6 +2721,7 @@
   "projectFileDependencyGroups": {
     "net7.0": [
       "Autofac.Extensions.DependencyInjection >= 8.0.0",
+      "Jazani.Core >= 1.0.0",
       "Jazani.Domain >= 1.0.0",
       "Microsoft.EntityFrameworkCore >= 7.0.11",
       "Microsoft.EntityFrameworkCore.SqlServer >= 7.0.11"
@@ -2740,6 +2759,9 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
+            "C:\\Users\\sage1\\OneDrive\\Sage-PC\\Trabajos\\Jazani\\Proyectos\\BootcampBackend.Jazani2023\\Jazani.Core\\Jazani.Core.csproj": {
+              "projectPath": "C:\\Users\\sage1\\OneDrive\\Sage-PC\\Trabajos\\Jazani\\Proyectos\\BootcampBackend.Jazani2023\\Jazani.Core\\Jazani.Core.csproj"
+            },
             "C:\\Users\\sage1\\OneDrive\\Sage-PC\\Trabajos\\Jazani\\Proyectos\\BootcampBackend.Jazani2023\\Jazani.Domain\\Jazani.Domain.csproj": {
               "projectPath": "C:\\Users\\sage1\\OneDrive\\Sage-PC\\Trabajos\\Jazani\\Proyectos\\BootcampBackend.Jazani2023\\Jazani.Domain\\Jazani.Domain.csproj"
             }

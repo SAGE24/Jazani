@@ -9,6 +9,7 @@
       "Jazani.Api/1.0.0": {
         "dependencies": {
           "Jazani.Application": "1.0.0",
+          "Jazani.Core": "1.0.0",
           "Jazani.Infraestructure": "1.0.0",
           "Newtonsoft.Json": "13.0.3",
           "Serilog.AspNetCore": "7.0.0",
@@ -776,13 +777,22 @@
           "AutoMapper.Extensions.Microsoft.DependencyInjection": "12.0.1",
           "Autofac.Extensions.DependencyInjection": "8.0.0",
           "FluentValidation.AspNetCore": "11.3.0",
+          "Jazani.Core": "1.0.0",
           "Jazani.Domain": "1.0.0"
         },
         "runtime": {
           "Jazani.Application.dll": {}
         }
       },
+      "Jazani.Core/1.0.0": {
+        "runtime": {
+          "Jazani.Core.dll": {}
+        }
+      },
       "Jazani.Domain/1.0.0": {
+        "dependencies": {
+          "Jazani.Core": "1.0.0"
+        },
         "runtime": {
           "Jazani.Domain.dll": {}
         }
@@ -790,6 +800,7 @@
       "Jazani.Infraestructure/1.0.0": {
         "dependencies": {
           "Autofac.Extensions.DependencyInjection": "8.0.0",
+          "Jazani.Core": "1.0.0",
           "Jazani.Domain": "1.0.0",
           "Microsoft.EntityFrameworkCore": "7.0.11",
           "Microsoft.EntityFrameworkCore.SqlServer": "7.0.11"
@@ -1374,6 +1385,11 @@
       "hashPath": "system.windows.extensions.6.0.0.nupkg.sha512"
     },
     "Jazani.Application/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Jazani.Core/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

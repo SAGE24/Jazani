@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using Jazani.Application.Cores.Exceptions;
 using Jazani.Application.Generals.Dtos.Minerals;
 using Jazani.Domain.Generals.Models;
 using Jazani.Domain.Generals.Repositories;
@@ -28,7 +29,7 @@ public class MineralService : IMineralService
 
     public async Task<MineralDto> DisabledAsync(int id)
     {
-        Mineral? record = await SearchRecord(id);
+        Mineral record = await SearchRecord(id);
         record.State = false;
 
         Mineral modifiedRecord = await _mineralRepository.SaveAsync(record);
@@ -38,7 +39,7 @@ public class MineralService : IMineralService
 
     public async Task<MineralDto> EditAsync(int id, MineralSaveDto mineralSave)
     {
-        Mineral? record = await SearchRecord(id);
+        Mineral record = await SearchRecord(id);
 
         _mapper.Map<MineralSaveDto, Mineral>(mineralSave, record);
 
@@ -52,12 +53,19 @@ public class MineralService : IMineralService
         return _mapper.Map<IReadOnlyList<MineralDto>>(await _mineralRepository.FindAllAsync());
     }
 
-    public async Task<MineralDto?> FindByIdAsync(int id)
+    public async Task<MineralDto> FindByIdAsync(int id)
     {
-        return _mapper.Map<MineralDto?>(await SearchRecord(id));
+        return _mapper.Map<MineralDto>(await SearchRecord(id));
     }
 
-    private async Task<Mineral?> SearchRecord(int id) { 
-        return await _mineralRepository.FindByIdAsync(id);
+    private async Task<Mineral> SearchRecord(int id) {
+        var record = await _mineralRepository.FindByIdAsync(id);
+        return record is null ? throw MineralTypeNotFound(id) : record;
+    }
+
+    private NotFoundCoreException MineralTypeNotFound(int id)
+    {
+        //_logger.LogWarning(message: $"Tipo de mineral no econtrado para el id: {id}");
+        return new NotFoundCoreException($"Tipo de mineral no econtrado para el id: {id}");
     }
 }
