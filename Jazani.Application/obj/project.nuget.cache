@@ -1,12 +1,16 @@
 {
   "version": 2,
-  "dgSpecHash": "AcGpupaR8vu6WS2pk+1zvfN1SPxMgo7uGhoa0BCBzl8qtMVPFR4Lc5n8jWGU/VUCsHOu1EqIglqg78Osq8NPeA==",
+  "dgSpecHash": "GxC7nA/7GimvRQ/ViSgYYuqGw2+Wh8dNF7kW78XmlI24bf/zBnN97eWde69UDwicFIJgM0oG+92hosDmiaySCA==",
   "success": true,
   "projectFilePath": "C:\\Users\\sage1\\OneDrive\\Sage-PC\\Trabajos\\Jazani\\Proyectos\\BootcampBackend.Jazani2023\\Jazani.Application\\Jazani.Application.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\sage1\\.nuget\\packages\\autofac\\7.1.0\\autofac.7.1.0.nupkg.sha512",
+    "C:\\Users\\sage1\\.nuget\\packages\\autofac\\6.4.0\\autofac.6.4.0.nupkg.sha512",
+    "C:\\Users\\sage1\\.nuget\\packages\\autofac.extensions.dependencyinjection\\8.0.0\\autofac.extensions.dependencyinjection.8.0.0.nupkg.sha512",
     "C:\\Users\\sage1\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\sage1\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",
+    "C:\\Users\\sage1\\.nuget\\packages\\fluentvalidation\\11.5.1\\fluentvalidation.11.5.1.nupkg.sha512",
+    "C:\\Users\\sage1\\.nuget\\packages\\fluentvalidation.aspnetcore\\11.3.0\\fluentvalidation.aspnetcore.11.3.0.nupkg.sha512",
+    "C:\\Users\\sage1\\.nuget\\packages\\fluentvalidation.dependencyinjectionextensions\\11.5.1\\fluentvalidation.dependencyinjectionextensions.11.5.1.nupkg.sha512",
     "C:\\Users\\sage1\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\sage1\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\6.0.0\\microsoft.extensions.dependencyinjection.abstractions.6.0.0.nupkg.sha512",
     "C:\\Users\\sage1\\.nuget\\packages\\microsoft.extensions.options\\6.0.0\\microsoft.extensions.options.6.0.0.nupkg.sha512",

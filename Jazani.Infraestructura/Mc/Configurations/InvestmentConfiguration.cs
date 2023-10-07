@@ -1,4 +1,5 @@
-﻿using Jazani.Domain.Mc.Models;
+﻿using Jazani.Domain.Generals.Models;
+using Jazani.Domain.Mc.Models;
 using Jazani.Infraestructure.Cores.Converters;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
@@ -11,7 +12,7 @@ public class InvestmentConfiguration : IEntityTypeConfiguration<Investment>
         builder.ToTable("investment", "mc");
         builder.HasKey(t => t.Id);
         builder.Property(t => t.Id).ValueGeneratedOnAdd();
-        builder.Property(t => t.Amountinvestd).HasColumnName("amountinvestd");
+        builder.Property(t => t.Amountinvestd).HasColumnName("amountinvestd").HasColumnType("decimal");
         builder.Property(t => t.Year).HasColumnName("year");
         builder.Property(t => t.Description).HasColumnName("description");
         builder.Property(t => t.Miningconcessionid).HasColumnName("miningconcessionid");
@@ -40,6 +41,26 @@ public class InvestmentConfiguration : IEntityTypeConfiguration<Investment>
 
         builder.HasOne(one => one.Investmentconcept)
             .WithMany(many => many.Investments)
-            .HasForeignKey(fk => fk.Investmentconceptid);
+        .HasForeignKey(fk => fk.Investmentconceptid);
+
+        builder.HasOne(one => one.Holder)
+            .WithMany(many => many.Investments)
+            .HasForeignKey(fk => fk.Holderid);
+
+        builder.HasOne(one => one.Investmenttype)
+            .WithMany(many => many.Investments)
+            .HasForeignKey(fk => fk.Investmenttypeid);
+
+        builder.HasOne(one => one.Miningconcession)
+            .WithMany(many => many.Investments)
+            .HasForeignKey(fk => fk.Miningconcessionid);
+
+        builder.HasOne(many => many.Measureunit)
+            .WithMany(many => many.Investments)
+            .HasForeignKey(fk => fk.Measureunitid);
+
+        builder.HasOne(one => one.Periodtype)
+            .WithMany(many => many.Investments)
+            .HasForeignKey(fk => fk.Periodtypeid);
     }
 }

@@ -1,4 +1,6 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Jazani.Domain.Cores.Paginations;
+using Jazani.Infraestructure.Cores.Paginations;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
@@ -16,6 +18,8 @@ public static class InfrastructureServiceRegistration
         //services.AddTransient<IInformationSourceRepository, InformationSourceRepository>();
         //services.AddTransient<IInformationSourceTypeRepository, InformationSourceTypeRepository>();
         //services.AddTransient<IMineralTypeRepository, MineralTypeRepository>();
+
+        services.AddTransient(typeof(IPaginator<>), typeof(Paginator<>));
 
         return services;
     }

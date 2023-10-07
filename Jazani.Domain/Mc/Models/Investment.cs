@@ -1,7 +1,10 @@
-﻿namespace Jazani.Domain.Mc.Models;
-public class Investment
+﻿using Jazani.Domain.Cores.Models;
+using Jazani.Domain.Generals.Models;
+using Jazani.Domain.Soc;
+
+namespace Jazani.Domain.Mc.Models;
+public class Investment : CoreModel<int>
 {
-    public int Id { get; set; }
     public decimal Amountinvestd { get; set; }
     public int? Year { get; set; }
     public string? Description { get; set; }
@@ -10,8 +13,6 @@ public class Investment
     public int Currencytypeid { get; set; }
     public int? Periodtypeid { get; set; }
     public int? Measureunitid { get; set; }
-    public DateTime RegistrationDate { get; set; }
-    public bool State { get; set; }
     public string? Monthname { get; set; }
     public int? Monthid { get; set; }
     public string? Accreditationcode { get; set; }
@@ -27,5 +28,9 @@ public class Investment
     public DateTime? Declarationdate { get; set; }
 
     public virtual Investmentconcept? Investmentconcept { get; set; }
-
+    public virtual Holder? Holder { get; set; }
+    public virtual Investmenttype? Investmenttype { get; set; }
+    public virtual Miningconcession? Miningconcession { get; set; }
+    public virtual Measureunit? Measureunit { get; set; }
+    public virtual Periodtype? Periodtype { get; set; }
 }

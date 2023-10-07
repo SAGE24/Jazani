@@ -1,10 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "EsKGUgLTLdjeiHUsVFhIahCtiqTZUVoYucCeqHe9l3qmTgukyDWHsBkPe2wCt0+R+bnDLz1yIiYHhxU36OA1jQ==",
+  "dgSpecHash": "YFRgeey2uUH0wzqHxZuC3GWkv+YQYQf4tSEK56I8kfpLLvBzZCt9CEarPTitM4XSdfMz4LP0YmCd3apu1DHuvw==",
   "success": true,
   "projectFilePath": "C:\\Users\\sage1\\OneDrive\\Sage-PC\\Trabajos\\Jazani\\Proyectos\\BootcampBackend.Jazani2023\\Jazani.Infraestructura\\Jazani.Infraestructure.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\sage1\\.nuget\\packages\\autofac\\7.1.0\\autofac.7.1.0.nupkg.sha512",
+    "C:\\Users\\sage1\\.nuget\\packages\\autofac\\6.4.0\\autofac.6.4.0.nupkg.sha512",
+    "C:\\Users\\sage1\\.nuget\\packages\\autofac.extensions.dependencyinjection\\8.0.0\\autofac.extensions.dependencyinjection.8.0.0.nupkg.sha512",
     "C:\\Users\\sage1\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",
     "C:\\Users\\sage1\\.nuget\\packages\\azure.identity\\1.7.0\\azure.identity.1.7.0.nupkg.sha512",
     "C:\\Users\\sage1\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
