@@ -1,6 +1,6 @@
-﻿namespace Jazani.Application.Mc.Dtos.Investments;
-public class InvestmentConceptSimpleDto
+﻿using Jazani.Application.Cores.Dtos;
+
+namespace Jazani.Application.Mc.Dtos.Investments;
+public class InvestmentConceptSimpleDto : CoreSimpleDto
 {
-    public int Id { get; set; }
-    public string Name { get; set; } = default;
 }

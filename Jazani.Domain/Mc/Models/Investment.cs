@@ -1,6 +1,6 @@
 ﻿using Jazani.Domain.Cores.Models;
 using Jazani.Domain.Generals.Models;
-using Jazani.Domain.Soc;
+using Jazani.Domain.Soc.Models;
 
 namespace Jazani.Domain.Mc.Models;
 public class Investment : CoreModel<int>
