@@ -5,7 +5,7 @@ public interface IInvestmentService
 {
     Task<IReadOnlyList<InvestmentDto>> FindAllAsync();
 
-    Task<InvestmentDto?> FindByIdAsync(int id);
+    Task<InvestmentDto> FindByIdAsync(int id);
 
     Task<InvestmentDto> CreateAsync(InvestmentSaveDto investmentSave);
 

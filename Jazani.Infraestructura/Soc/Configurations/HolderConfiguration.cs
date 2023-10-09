@@ -1,4 +1,4 @@
-﻿using Jazani.Domain.Soc;
+﻿using Jazani.Domain.Soc.Models;
 using Jazani.Infraestructure.Cores.Converters;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
@@ -33,7 +33,7 @@ public class HolderConfiguration : IEntityTypeConfiguration<Holder>
         builder.Property(t => t.Regimedatestart).HasColumnName("regimedatestart");
         builder.Property(t => t.Regimedateend).HasColumnName("regimedateend");
         builder.Property(t => t.Regimenumberconstancy).HasColumnName("regimenumberconstancy");
-        builder.Property(t => t.Registrationdate)
+        builder.Property(t => t.RegistrationDate)
             .HasColumnName("registrationdate")
             .HasConversion(new DateTimeToDdateTimeOffSet())
             ;

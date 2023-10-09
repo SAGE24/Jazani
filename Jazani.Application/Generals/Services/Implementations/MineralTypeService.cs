@@ -34,7 +34,7 @@ public class MineralTypeService : IMineralTypeService
 
     public async Task<MineralTypeDto> DisabledAsync(int id)
     {
-        MineralType? record = await SearchRecord(id);
+        MineralType record = await SearchRecord(id);
         record.State = false;
 
         MineralType modifiedRecord = await _mineralTypeRepository.SaveAsync(record);
@@ -44,7 +44,7 @@ public class MineralTypeService : IMineralTypeService
 
     public async Task<MineralTypeDto> EditAsync(int id, MineralTypeSaveDto mineralTypeSave)
     {
-        MineralType? record = await SearchRecord(id);
+        MineralType record = await SearchRecord(id);
 
         _mapper.Map<MineralTypeSaveDto, MineralType>(mineralTypeSave, record);
 
@@ -69,9 +69,9 @@ public class MineralTypeService : IMineralTypeService
         return _mapper.Map<MineralTypeDto>(record);
     }
 
-    private async Task<MineralType?> SearchRecord(int id)
+    private async Task<MineralType> SearchRecord(int id)
     {
-        MineralType? record = await _mineralTypeRepository.FindByIdAsync(id);
+        MineralType record = await _mineralTypeRepository.FindByIdAsync(id);
         return record is null ? throw MineralTypeNotFound(id) : record;
     }
 

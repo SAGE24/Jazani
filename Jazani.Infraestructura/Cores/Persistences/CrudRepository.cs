@@ -17,7 +17,7 @@ public class CrudRepository<T, ID> : ICrudRepository<T, ID> where T : class
         return await _dbContext.Set<T>().AsNoTracking().ToListAsync();
     }
 
-    public virtual async Task<T?> FindByIdAsync(ID id)
+    public virtual async Task<T> FindByIdAsync(ID id)
     {
         return await _dbContext.Set<T>().FindAsync(id);
     }

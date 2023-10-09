@@ -1,11 +1,13 @@
-﻿using Jazani.Application.Mc.Dtos.Investments;
+﻿using Jazani.Api.Exeptions;
+using Jazani.Application.Mc.Dtos.Investments;
 using Jazani.Application.Mc.Services;
+using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Jazani.Api.Controllers.Mc;
 
 [Route("api/v1/[controller]")]
-[ApiController]
+//[ApiController]
 public class InvestmentController : ControllerBase
 {
     private readonly IInvestmentService _investmentService;
@@ -22,15 +24,19 @@ public class InvestmentController : ControllerBase
     }
 
     [HttpGet("{id}")]
-    public async Task<InvestmentDto?> Get(int id)
+    [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(InvestmentDto))]
+    [ProducesResponseType(StatusCodes.Status404NotFound, Type = typeof(ErrorModel))]
+    public async Task<Results<NotFound, Ok<InvestmentDto>>> Get(int id)
     {
-        return await _investmentService.FindByIdAsync(id);
+        return TypedResults.Ok(await _investmentService.FindByIdAsync(id));
     }
 
     [HttpPost]
-    public async Task<InvestmentDto> Post([FromBody] InvestmentSaveDto mineralTypeSave)
+    [ProducesResponseType(StatusCodes.Status201Created, Type = typeof(InvestmentDto))]
+    [ProducesResponseType(StatusCodes.Status400BadRequest, Type = typeof(ErrorModel))]
+    public async Task<Results<BadRequest, Ok<InvestmentDto>>> Post([FromBody] InvestmentSaveDto mineralTypeSave)
     {
-        return await _investmentService.CreateAsync(mineralTypeSave);
+        return TypedResults.Ok(await _investmentService.CreateAsync(mineralTypeSave));
     }
 
     [HttpPut("{id}")]
