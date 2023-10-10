@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using Jazani.Core.Paginations;
 using Jazani.Domain.Generals.Models;
 using Jazani.Domain.Mc.Models;
 using Jazani.Domain.Soc.Models;
@@ -17,5 +18,10 @@ public class InvestmentProfile : Profile
         CreateMap<Periodtype, InvestmentPeriodtypeSimpleDto>();
 
         CreateMap<Investment, InvestmentSaveDto>().ReverseMap();
+
+        //Paginacion
+        CreateMap<Investment, InvestmentFilterDto>().ReverseMap();
+        CreateMap<ResponsePagination<Investment>, ResponsePagination<InvestmentDto>>();
+        CreateMap<RequestPagination<Investment>, RequestPagination<InvestmentFilterDto>>().ReverseMap();
     }
 }
