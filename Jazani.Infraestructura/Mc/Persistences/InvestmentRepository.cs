@@ -56,7 +56,14 @@ public class InvestmentRepository : CrudRepository<Investment, int>, IInvestment
             ((filter.State == null) || x.State == filter.State)
             );
         }
-        query = query.OrderByDescending(x => x.Id);
+        query = query.OrderByDescending(x => x.Id)
+            .Include(t => t.Investmentconcept)
+            .Include(t => t.Holder)
+            .Include(t => t.Investmenttype)
+            .Include(t => t.Miningconcession)
+            .Include(t => t.Measureunit)
+            .Include(t => t.Periodtype)
+            ;
 
         return await _paginator.Paginate(query, request);
     }
