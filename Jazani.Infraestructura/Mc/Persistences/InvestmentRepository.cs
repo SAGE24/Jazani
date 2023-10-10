@@ -1,4 +1,7 @@
-﻿using Jazani.Domain.Mc.Models;
+﻿using Autofac.Core.Registration;
+using Jazani.Core.Paginations;
+using Jazani.Domain.Cores.Paginations;
+using Jazani.Domain.Mc.Models;
 using Jazani.Domain.Mc.Repositories;
 using Jazani.Infraestructure.Cores.Contexts;
 using Jazani.Infraestructure.Cores.Persistences;
@@ -8,10 +11,12 @@ namespace Jazani.Infraestructure.Mc.Persistences;
 public class InvestmentRepository : CrudRepository<Investment, int>, IInvestmentRepository
 {
     private readonly ApplicationDbContext _dbContext;
+    private readonly IPaginator<Investment> _paginator;
 
-    public InvestmentRepository(ApplicationDbContext dbContext) : base(dbContext)
+    public InvestmentRepository(ApplicationDbContext dbContext, IPaginator<Investment> paginator) : base(dbContext)
     {
         _dbContext = dbContext;
+        _paginator = paginator;
     }
 
     public override async Task<IReadOnlyList<Investment>> FindAllAsync()
@@ -37,6 +42,23 @@ public class InvestmentRepository : CrudRepository<Investment, int>, IInvestment
             .Include(t => t.Measureunit)
             .Include(t => t.Periodtype)
             .FirstOrDefaultAsync(t => t.Id == id);
+    }
+
+    public async Task<ResponsePagination<Investment>> PaginatedSearch(RequestPagination<Investment> request)
+    {
+        var filter = request.Filter;
+        var query = _dbContext.Set<Investment>().AsQueryable();
+
+        if (filter is not null) {
+            query = query.Where(x =>
+            ((filter.Year == null || filter.Year == 0) || x.Year == filter.Year) &&
+            (string.IsNullOrWhiteSpace(filter.Description) || x.Description.ToUpper().Contains(filter.Description.ToUpper())) &&
+            ((filter.State == null) || x.State == filter.State)
+            );
+        }
+        query = query.OrderByDescending(x => x.Id);
+
+        return await _paginator.Paginate(query, request);
     }
 
     public override async Task<Investment> SaveAsync(Investment entity)

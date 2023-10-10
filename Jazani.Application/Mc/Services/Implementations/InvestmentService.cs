@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using Jazani.Application.Cores.Exceptions;
 using Jazani.Application.Mc.Dtos.Investments;
+using Jazani.Core.Paginations;
 using Jazani.Domain.Mc.Models;
 using Jazani.Domain.Mc.Repositories;
 using Microsoft.Extensions.Logging;
@@ -74,5 +75,13 @@ public class InvestmentService : IInvestmentService
     {
         _logger.LogWarning(message: $"Tipo de mineral no econtrado para el id: {id}");
         return new NotFoundCoreException($"Tipo de mineral no econtrado para el id: {id}");
+    }
+
+    public async Task<ResponsePagination<InvestmentDto>> PaginatedSearch(RequestPagination<InvestmentFilterDto> request)
+    {
+        RequestPagination<Investment> entity = _mapper.Map<RequestPagination<Investment>>(request);
+        ResponsePagination<Investment> response = await _investmentRepository.PaginatedSearch(entity);
+
+        return _mapper.Map<ResponsePagination<InvestmentDto>>(response);
     }
 }

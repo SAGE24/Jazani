@@ -1,6 +1,7 @@
 ﻿using Jazani.Api.Exeptions;
 using Jazani.Application.Mc.Dtos.Investments;
 using Jazani.Application.Mc.Services;
+using Jazani.Core.Paginations;
 using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
 
@@ -49,5 +50,11 @@ public class InvestmentController : ControllerBase
     public async Task<InvestmentDto> Disabled(int id)
     {
         return await _investmentService.DisabledAsync(id);
+    }
+
+    [HttpGet("PaginatedSearch")]
+    public async Task<ResponsePagination<InvestmentDto>> PaginatedSearch([FromQuery] RequestPagination<InvestmentFilterDto> request)
+    {
+        return await _investmentService.PaginatedSearch(request);
     }
 }
